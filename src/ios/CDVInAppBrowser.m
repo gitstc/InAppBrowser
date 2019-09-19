@@ -664,8 +664,8 @@
         [titleLabel setValue:@(10.0) forKey:@"minimumFontSize"];
     }
 
-    titleLabel.text = NSLocalizedString(@"Airbnb Experiences", nil);
-    titleLabel.textAlignment = NSTextAlignmentLeft;
+    titleLabel.text = NSLocalizedString(self.tsu_title, nil);
+    titleLabel.textAlignment = [self.tsu_direction isEqualToString:@"right"] ? NSTextAlignmentRight : NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
     titleLabel.userInteractionEnabled = NO;
 
@@ -1051,6 +1051,10 @@
         self.closebuttoncolor = nil;
         self.toolbarcolor = nil;
         self.toolbartranslucent = YES;
+
+        //Firas Update
+        self.tsu_title = @"";
+        self.tsu_direction = @"";
     }
 
     return self;
