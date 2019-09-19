@@ -70,6 +70,10 @@
 @property (nonatomic, assign) BOOL hidden;
 @property (nonatomic, assign) BOOL disallowoverscroll;
 
+//Firas Update
+@property (nonatomic, copy) NSString* tsu_title;
+@property (nonatomic, copy) NSString* tsu_direction;
+
 + (CDVInAppBrowserOptions*)parseOptions:(NSString*)options;
 
 @end
