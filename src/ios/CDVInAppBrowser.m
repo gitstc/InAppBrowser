@@ -664,8 +664,8 @@
         [titleLabel setValue:@(10.0) forKey:@"minimumFontSize"];
     }
 
-    titleLabel.text = NSLocalizedString(self.tsu_title, nil);
-    titleLabel.textAlignment = [self.tsu_direction isEqualToString:@"right"] ? NSTextAlignmentRight : NSTextAlignmentCenter;
+    titleLabel.text = NSLocalizedString(_browserOptions.tsu_title, nil);
+    titleLabel.textAlignment = [_browserOptions.tsu_direction isEqualToString:@"right"] ? NSTextAlignmentRight : NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
     titleLabel.userInteractionEnabled = NO;
 
