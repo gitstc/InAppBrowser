@@ -669,11 +669,14 @@
     titleLabel.textColor = [UIColor colorWithWhite:1.000 alpha:1.000];
     titleLabel.userInteractionEnabled = NO;
 
+    //Firas Update
+    UIBarButtonItem* titleButton = [[UIBarButtonItem alloc] initWithCustomView: titleLabel];
+
     // Filter out Navigation Buttons if user requests so
     if (_browserOptions.hidenavigationbuttons) {
-      [self.toolbar setItems:@[self.closeButton, titleLabel, flexibleSpaceButton, titleLabel]];
+      [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, titleButton]];
     } else {
-      [self.toolbar setItems:@[self.closeButton, titleLabel, flexibleSpaceButton, titleLabel, self.backButton, fixedSpaceButton, self.forwardButton]];
+      [self.toolbar setItems:@[self.closeButton, flexibleSpaceButton, titleButton, self.backButton, fixedSpaceButton, self.forwardButton]];
     }
 
     self.view.backgroundColor = [UIColor grayColor];
